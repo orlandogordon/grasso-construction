@@ -1,30 +1,30 @@
 
 function App() {
   const galleryImages = [
-    '/images/gallery/concrete01.jpeg',
-    '/images/gallery/drainage02.jpeg',
-    '/images/gallery/drainage03.jpeg',
-    '/images/gallery/drainage04.jpeg',
-    '/images/gallery/drainage05.jpeg',
-    '/images/gallery/excavation02.jpeg',
-    '/images/gallery/excavation03.jpeg',
-    '/images/gallery/excavation04.jpeg',
-    '/images/gallery/pavers00.jpeg',
-    '/images/gallery/pavers02.jpeg',
-    '/images/gallery/pavers03.jpeg',
-    '/images/gallery/pavers04.jpeg',
-    '/images/gallery/pavers05.jpeg',
-    '/images/gallery/pavers06.jpeg',
-    '/images/gallery/pavers07.jpeg',
-    '/images/gallery/rwall01.jpeg',
-    '/images/gallery/rwall02.jpeg',
-    '/images/gallery/rwall03.jpeg',
-    '/images/gallery/rwall04.jpeg',
-    '/images/gallery/sitework01.jpeg',
-    '/images/gallery/stones01.jpeg',
-    '/images/gallery/stones02.jpeg',
-    '/images/gallery/utilities01.jpeg',
-    '/images/gallery/utilities02.jpeg'
+    './images/gallery/concrete01.jpeg',
+    './images/gallery/drainage02.jpeg',
+    './images/gallery/drainage03.jpeg',
+    './images/gallery/drainage04.jpeg',
+    './images/gallery/drainage05.jpeg',
+    './images/gallery/excavation02.jpeg',
+    './images/gallery/excavation03.jpeg',
+    './images/gallery/excavation04.jpeg',
+    './images/gallery/pavers00.jpeg',
+    './images/gallery/pavers02.jpeg',
+    './images/gallery/pavers03.jpeg',
+    './images/gallery/pavers04.jpeg',
+    './images/gallery/pavers05.jpeg',
+    './images/gallery/pavers06.jpeg',
+    './images/gallery/pavers07.jpeg',
+    './images/gallery/rwall01.jpeg',
+    './images/gallery/rwall02.jpeg',
+    './images/gallery/rwall03.jpeg',
+    './images/gallery/rwall04.jpeg',
+    './images/gallery/sitework01.jpeg',
+    './images/gallery/stones01.jpeg',
+    './images/gallery/stones02.jpeg',
+    './images/gallery/utilities01.jpeg',
+    './images/gallery/utilities02.jpeg'
   ]
 
   return (
@@ -34,7 +34,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/images/hero/hero01.jpeg')`,
+            backgroundImage: `url('./images/hero/hero01.jpeg')`,
           }}
         ></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -82,7 +82,7 @@ function App() {
             {/* Excavating */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/excavating.jpeg" 
+                src="./images/services/excavating.jpeg" 
                 alt="Excavating" 
                 className="w-full h-48 object-cover"
               />
@@ -98,7 +98,7 @@ function App() {
             {/* Concrete */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/concrete.jpeg" 
+                src="./images/services/concrete.jpeg" 
                 alt="Grading" 
                 className="w-full h-48 object-cover"
               />
@@ -114,7 +114,7 @@ function App() {
             {/* Underground Utilities */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/utilities.jpeg" 
+                src="./images/services/utilities.jpeg" 
                 alt="Underground Utilities" 
                 className="w-full h-48 object-cover"
               />
@@ -130,7 +130,7 @@ function App() {
             {/* Drainage */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/drainage.jpeg" 
+                src="./images/services/drainage.jpeg" 
                 alt="Drainage" 
                 className="w-full h-48 object-cover"
               />
@@ -146,7 +146,7 @@ function App() {
             {/* Sitework */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/sitework.jpeg" 
+                src="./images/services/sitework.jpeg" 
                 alt="Sitework" 
                 className="w-full h-48 object-cover"
               />
@@ -162,7 +162,7 @@ function App() {
             {/* Stone Spreading */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/stones.jpeg" 
+                src="./images/services/stones.jpeg" 
                 alt="Stone Spreading" 
                 className="w-full h-48 object-cover"
               />
@@ -178,7 +178,7 @@ function App() {
             {/* Pavers */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/pavers.jpeg" 
+                src="./images/services/pavers.jpeg" 
                 alt="Stone Spreading" 
                 className="w-full h-48 object-cover"
               />
@@ -194,7 +194,7 @@ function App() {
             {/* Retaining Walls */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <img 
-                src="/images/services/rwall.jpeg" 
+                src="./images/services/rwall.jpeg" 
                 alt="Stone Spreading" 
                 className="w-full h-48 object-cover"
               />
