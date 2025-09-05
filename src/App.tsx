@@ -1,4 +1,6 @@
 
+import Navigation from './components/Navigation'
+
 function App() {
   const galleryImages = [
     './images/gallery/concrete01.jpeg',
@@ -29,6 +31,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <Navigation />
       {/* Hero Section */}
       <section className="relative h-screen bg-gray-900 flex items-center justify-center">
         <div 
@@ -37,31 +41,17 @@ function App() {
             backgroundImage: `url('./images/hero/hero01.jpeg')`,
           }}
         ></div>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
         
-        {/* Phone Number - Top Right */}
-        <div className="absolute top-8 right-8 text-red-500 text-2xl font-bold bg-white px-2 py-1 rounded shadow">
-          (732) 123-4567
-        </div>
-
-        {/* Main Logo - Center Left */}
-        <div className="absolute top-1/2 left-16 transform -translate-y-1/2 z-10">
-          <div className="relative bg-red-600 text-white px-12 py-8 shadow-xl">
-            <div className="absolute inset-0 bg-red-600" style={{
-              clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)'
-            }}></div>
-            <div className="relative text-xl font-bold text-center whitespace-nowrap">
-              GRASSO CONSTRUCTION
-            </div>
-          </div>
-        </div>
 
         {/* Services Text */}
-        <div className="absolute bottom-32 left-16 text-white">
-          <div className="text-3xl font-bold mb-4">
-            Excavating • Grading • Sitework • Underground Utilities
+        <div className="absolute bottom-36 left-4 right-4 md:bottom-32 md:left-16 md:right-auto text-white">
+          <div className="text-2xl md:text-3xl font-black mb-4 text-center md:text-left drop-shadow-lg">
+            <div className="block md:hidden">Excavating • Grading</div>
+            <div className="block md:hidden">Sitework • Utilities</div>
+            <div className="hidden md:block">Excavating • Grading • Sitework • Underground Utilities</div>
           </div>
-          <div className="text-lg max-w-md">
+          <div className="text-base md:text-lg font-semibold max-w-full md:max-w-md text-center md:text-left drop-shadow-md">
             Grasso Construction is a family owned and operated team 
             that has been serving the community with quality excavation and 
             site preparation services since 2003. We specialize in the 
@@ -87,7 +77,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Excavating</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Excavating</h3>
                 <p className="text-gray-600">
                   Grasso Construction can offer many excavation & earthwork services. These include preparation for 
                   basements, pools, driveways, and many other residential and commercial projects.
@@ -103,7 +93,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Concrete</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Concrete</h3>
                 <p className="text-gray-600">
                   At Grasso Construction our team delivers professional concrete solutions for residential and commercial 
                   projects. We offer services such as driveways, sidewalks, patios & foundation work with quality craftsmanship.
@@ -119,7 +109,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Underground Utilities</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Underground Utilities</h3>
                 <p className="text-gray-600">
                   At Grasso Construction, we are first for all of your underground utility installation needs and underground 
                   utility installations.
@@ -135,7 +125,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Drainage</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Drainage</h3>
                 <p className="text-gray-600">
                   At Grasso Construction, we offer many drainage & water management services including French drains, 
                   dry well systems, and much more.
@@ -151,7 +141,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Sitework</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Sitework</h3>
                 <p className="text-gray-600">
                   At Grasso Construction, we offer many site preparation and earthwork services including land clearing, concrete 
                   demolition, and site prep.
@@ -167,7 +157,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Stone Spreading</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Stone Spreading</h3>
                 <p className="text-gray-600">
                   At Grasso Construction, we are experts in stone spreading and stone installation. We offer stone for backyards, driveways, 
                   walkways and much more.
@@ -183,7 +173,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Pavers</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Pavers</h3>
                 <p className="text-gray-600">
                   At Grasso Construction our team creates beautiful hardscaping with quality paver installations. We offer services such as 
                   paver patios, walkways, driveways & decorative stonework to enhance your property.
@@ -199,7 +189,7 @@ function App() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-red-600 mb-4">Retaining Walls</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Retaining Walls</h3>
                 <p className="text-gray-600">
                   At Grasso Construction our team builds durable retaining walls to prevent erosion and create usable space. We offer services 
                   such as stone walls, block walls & terracing solutions.
@@ -257,7 +247,7 @@ function App() {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>Copyright 2024 Grasso Construction. All Rights Reserved.</p>
+            <p>Copyright 2025 Grasso Construction. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
