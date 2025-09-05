@@ -68,5 +68,26 @@ export default tseslint.config([
 ])
 ```
 
+## Deployment Notes
+
+### GitHub Pages Deployment
+This project is currently configured for GitHub Pages deployment with a basename of `/grasso-construction/`.
+
+**Important**: If deploying to a different hosting platform (Vercel, Netlify, custom domain, etc.), you'll need to update the React Router configuration:
+
+1. Open `src/App.tsx`
+2. Change the basename from:
+   ```tsx
+   <Router basename="/grasso-construction">
+   ```
+   to:
+   ```tsx
+   <Router basename="/">
+   ```
+   or remove the basename entirely for root domain deployments.
+
 ## Commands 
 - Run Claude Code: npx @anthropic-ai/claude-code
+- Development: `npm run dev`
+- Build: `npm run build`
+- Deploy to GitHub Pages: `npm run deploy`

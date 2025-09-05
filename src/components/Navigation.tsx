@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
+  
+  // Check if we're on the home page
+  const isHomePage = location.pathname === '/'
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -21,7 +26,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
+      isScrolled || !isHomePage
         ? 'bg-white/90 backdrop-blur-sm shadow-lg' 
         : 'bg-transparent shadow-none'
     }`}>
@@ -30,7 +35,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
+              isScrolled || !isHomePage ? 'text-gray-900' : 'text-white'
             }`}>
               GRASSO CONSTRUCTION
             </div>
@@ -39,36 +44,36 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                  isScrolled 
+                  isScrolled || !isHomePage
                     ? 'text-gray-900 hover:text-gray-600' 
                     : 'text-white hover:text-gray-300'
                 }`}
               >
                 Home
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/services"
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                  isScrolled 
+                  isScrolled || !isHomePage
                     ? 'text-gray-900 hover:text-gray-600' 
                     : 'text-white hover:text-gray-300'
                 }`}
               >
                 Our Services
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="/contact"
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                  isScrolled 
+                  isScrolled || !isHomePage
                     ? 'text-gray-900 hover:text-gray-600' 
                     : 'text-white hover:text-gray-300'
                 }`}
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -77,7 +82,7 @@ const Navigation = () => {
             <button
               onClick={toggleMenu}
               className={`p-2 focus:outline-none transition-colors duration-300 ${
-                isScrolled 
+                isScrolled || !isHomePage
                   ? 'text-gray-900 hover:text-gray-600 focus:text-gray-600' 
                   : 'text-white hover:text-gray-300 focus:text-gray-300'
               }`}
@@ -98,39 +103,39 @@ const Navigation = () => {
               ? 'bg-white/90 backdrop-blur-sm shadow-lg' 
               : 'bg-black/20 backdrop-blur-sm'
           }`}>
-            <a
-              href="#"
+            <Link
+              to="/"
               className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                isScrolled 
+                isScrolled || !isHomePage
                   ? 'text-gray-900 hover:text-gray-600' 
                   : 'text-white hover:text-gray-300'
               }`}
               onClick={() => setIsOpen(false)}
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/services"
               className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                isScrolled 
+                isScrolled || !isHomePage
                   ? 'text-gray-900 hover:text-gray-600' 
                   : 'text-white hover:text-gray-300'
               }`}
               onClick={() => setIsOpen(false)}
             >
               Our Services
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/contact"
               className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
-                isScrolled 
+                isScrolled || !isHomePage
                   ? 'text-gray-900 hover:text-gray-600' 
                   : 'text-white hover:text-gray-300'
               }`}
               onClick={() => setIsOpen(false)}
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       )}
